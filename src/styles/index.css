@@ -1,0 +1,80 @@
+
+@import "./theme.css";
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------- GLOBAL FONT -------- */
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+/* -------- SMOOTH SCROLL -------- */
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* -------- FLOAT ANIMATION -------- */
+
+@keyframes float{
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(-10px);}
+  100%{transform: translateY(0px);}
+}
+
+.animate-float{
+  animation: float 3s ease-in-out infinite;
+}
+
+/* -------- FADE UP ANIMATION -------- */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform: translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp{
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* -------- GLOW BUTTON -------- */
+
+.glow-btn{
+  @apply bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold px-6 py-2 rounded-full transition-all duration-300;
+}
+
+.glow-btn:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,0,80,0.6);
+}
+
+/* -------- MENU CARD -------- */
+
+.menu-card{
+  @apply bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500;
+}
+
+.menu-card:hover{
+  transform: translateY(-10px) scale(1.05);
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* -------- FOOD IMAGE -------- */
+
+.food-img{
+  @apply w-full h-44 object-cover transition-transform duration-500;
+}
+
+.food-img:hover{
+  transform: scale(1.15);
+}
